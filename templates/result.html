@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Greyscale Result</title>
+</head>
+<body>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-list">
+            {% for msg in messages %}
+                <li class="flash-item">{{ msg }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <h1 class="page-title">Your Greyscale Conversion</h1>
+
+    <div class="image-wrapper">
+        <div class="image-block">
+            <h2>Original</h2>
+            <img src="{{ original_url }}" alt="Original Image" class="image-preview"/>
+        </div>
+        <div class="image-block">
+            <h2>Greyscale</h2>
+            <img src="{{ processed_url }}" alt="Greyscale Image" class="image-preview"/>
+        </div>
+    </div>
+
+    <a href="{{ url_for('upload_and_show') }}" class="btn">Upload Another</a>
+    </div>
+</body>
+</html>

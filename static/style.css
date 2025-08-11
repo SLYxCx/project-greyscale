@@ -1,0 +1,80 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+/* Form container */
+form {
+    background-color: #253544;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(1, 225, 255, 0.505);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels and inputs */
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+/* Submit button */
+input[type="submit"] {
+    padding: 10px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0097a7;
+}
+
+/* Flash-Messages */
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+    color: rgba(187, 0, 0, 0.868);
+}
+.flash-messages li {
+    margin: 0.5em 0;
+}
+
+/* Image preview styles */
+.image-preview {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(1, 225, 255, 0.505);
+}
